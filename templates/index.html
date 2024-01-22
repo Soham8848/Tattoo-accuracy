@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyTattoo - Tattoo Accuracy Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="BookMyTattoo Logo">
+        <div class="title-box">
+            <h1>BookMyTattoo</h1>
+            <h2>Tattoo Accuracy Classifier</h2>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h3>Upload Images</h3>
+        <form action="/result" method="post" enctype="multipart/form-data">
+            <label for="artist_image">Artist's Tattoo Image:</label>
+            <input type="file" id="artist_image" name="artist_image" accept="image/*"><br><br>
+
+            <label for="sketch_image">Tattoo Sketch Image:</label>
+            <input type="file" id="sketch_image" name="sketch_image" accept="image/*"><br><br>
+
+            <input type="submit" value="Submit">
+            <p id="accuracy-info">Accuracy: 76.6%</p>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+

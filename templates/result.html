@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyTattoo - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="BookMyTattoo Logo">
+        <div class="title-box">
+            <h1>BookMyTattoo</h1>
+            <h2>Tattoo Accuracy Classifier</h2>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h3>Accuracy Results</h3>
+        <p>Accuracy of Artist's Tattoo: {{ accuracy_artist_tattoo * 100:.2f }}%</p>
+        <p>Accuracy of Tattoo Sketch: {{ accuracy_sketch_tattoo * 100:.2f }}%</p>
+    </div>
+</body>
+</html>
+
+
+
